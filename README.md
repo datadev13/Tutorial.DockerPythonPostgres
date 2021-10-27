@@ -1,7 +1,7 @@
 ## Tutorial: Docker + Python app + PostgreSQL
 
 ### For this tutorial I used:
-* Ubuntu LFS: 20.04
+* Ubuntu LTS: 20.04
 * Python: 3.9
 * Docker: 20.10
 * Docker Compose: 1.29
