@@ -272,7 +272,7 @@ CONTAINER ID   IMAGE                              COMMAND                  CREAT
 28f40d5b6c1c   postgres:latest                    "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   0.0.0.0:5433->5432/tcp   tutorialdockerpythonpostgres_postgres_database_1
 
 ```
-_*If you see the Up status in State column, then we have successfully launched application.*_
+_*If you see the*_ **Up** _*status in*_ **State** _*column, then we have successfully launched application.*_
 
 #### 3. Let's check what our app is doing in its container:
 
