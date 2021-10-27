@@ -60,7 +60,7 @@ import sys
 POSTGRES_USER = os.environ.get("POSTGRES_USER")
 POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
 POSTGRES_DB = os.environ.get("POSTGRES_DB")
-# Docker database service name
+# Docker database service name.
 HOST = "postgres_database"
 
 # This code block say: if NAME start file == THIS file THEN do this.
@@ -117,11 +117,11 @@ _*Dockerfile configures application image using commands.*_
 # Get Python 3.9 Slim version.
 FROM python:3.9-slim
 
-# Upgrade pip version
+# Upgrade pip version.
 RUN /usr/local/bin/python -m pip install --upgrade pip
 # Create work directory and set permissions.
 RUN mkdir /app && chmod 770 ./app
-# Set work directory
+# Set work directory.
 WORKDIR /app
 # Copy all python app files in work directory.
 COPY . /app
@@ -204,11 +204,11 @@ _*This file describes our services, images and how the services interact with ea
 version: "3.8"
 
 services:
-# Database service name, we use this name in config.py in variable HOST
+# Database service name, we use this name in config.py in variable HOST.
   postgres_database:
 #   Image version, we use latest version
     image: postgres:latest
-#   File with virtual environment variables
+#   File with virtual environment variables.
     env_file:
       - ./.env
 #   Configuring ports and virtual networks.
@@ -278,7 +278,7 @@ _*If you see the Up status in State column, then we have successfully launched a
 
 * To access the app container, run:
 ```shell
-# My Python app container id, is 2776d5923fb9
+# My Python app container id, is 2776d5923fb9.
 $ docker exec -it <docker_container_id> bash
 ```
 * See what is in the directory:
@@ -308,7 +308,7 @@ _*In the file, we see a set of numbers that the app wrote there.*_
 
 * To access the database container, run:
 ```shell
-# My database container id, is 28f40d5b6c1c
+# My database container id, is 28f40d5b6c1c.
 $ docker exec -it <docker_container_id> bash
 ```
 * To enter the database, run: 
