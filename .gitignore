@@ -1,0 +1,7 @@
+# Env Stuff
+env/
+.env
+
+# Py Stuff
+__pycache__/
+.idea/

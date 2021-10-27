@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+
+  postgres_database:
+    image: postgres:latest
+    env_file:
+      - ./.env
+    ports:
+      - 5433:5432
+    networks:
+      - app-vnet
+    volumes:
+      - ./database/:/docker-entrypoint-initdb.d
+
+  app:
+    env_file:
+      - ./.env
+    build:
+      context: ./app
+      dockerfile: ./Dockerfile
+    depends_on:
+      - postgres_database
+    networks:
+      - app-vnet
+
+networks:
+  app-vnet:
+    driver: bridge
