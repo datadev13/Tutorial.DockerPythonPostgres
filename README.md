@@ -24,13 +24,13 @@ _*After completing this step, check the installation was successful :*_
 **Check Docker version:**
 ```shell
 $ docker --version
->> Docker version 20.10.8, build 3967b7d
+Docker version 20.10.8, build 3967b7d
 ```
 
 **Check Docker Compose version:**
 ```shell
 $ docker-compose --version
->> docker-compose version 1.29.2, build 5becea4c
+docker-compose version 1.29.2, build 5becea4c
 ```
 
 ### Step 1: Creating Python app files
@@ -242,6 +242,19 @@ networks:
   app-vnet:
     driver: bridge
 ```
+
+_*After completing this step, you should have the following project structure:*_
+
+    you_project_dir
+        ├───app
+        │    ├───main.py
+        │    ├───config.py
+        │    ├───requirements.txt
+        │    └───Dockerfile
+        ├───database
+        │       └───CREATE_TABLE.sql
+        ├───.env
+        └───docker-compose.yml
 
 ### Step 4: Launching project 
 
